@@ -25,7 +25,7 @@ namespace VsKeyFinder
                     var result = Regex.Match(sub, @"\w{5}-\w{5}-\w{5}-\w{5}-\w{5}");
                     if (result.Success)
                     {
-                        key = $"{result.Captures[0]}";
+                        key = $"{result.Value}";
                     }
                 }
                 return key;

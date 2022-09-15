@@ -15,6 +15,30 @@ namespace VsKeyFinder
         {
             InitializeComponent();
         }
+
+        private void Window_ContentRendered(object sender, System.EventArgs e)
+        {
+            if (_shown)
+                return;
+
+            _shown = true;
+
+            Products = new List<Product>();
+            var productData = ProductData.GetProducts();
+            var keyFinder = new KeyFinder();
+            foreach (var product in productData)
+            {
+                var key = keyFinder.FindKey(product);
+                if (!string.IsNullOrEmpty(key))
+                {
+                    product.Key = key;
+                    Products.Add(product);
+                }
+            }
+            datagrid.ItemsSource = Products;
+
+        }
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
@@ -49,29 +73,7 @@ namespace VsKeyFinder
             }
         }
 
-        private void Window_ContentRendered(object sender, System.EventArgs e)
-        {
 
-            if (_shown)
-                return;
-
-            _shown = true;
-
-            Products = new List<Product>();
-            var productData = ProductData.GetProducts();
-            var keyFinder = new KeyFinder();
-            foreach (var product in productData)
-            {
-                var key = keyFinder.FindKey(product);
-                if (!string.IsNullOrEmpty(key))
-                {
-                    product.Key = key;
-                    Products.Add(product);
-                }
-            }
-            datagrid.ItemsSource = Products;
-
-        }
 
 
     }
