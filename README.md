@@ -1,2 +1,2 @@
 # Visual-Studio-Key-Finder
-A little tool to find the Visual Studio license key installed on your PC
+A little tool to find all the Visual Studio license keys installed on your PC
