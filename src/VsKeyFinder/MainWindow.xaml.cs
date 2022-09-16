@@ -39,6 +39,14 @@ namespace VsKeyFinder
 
         }
 
+        private void btnCopy_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedProduct = datagrid.SelectedItem as Product;
+
+            if (selectedProduct != null)
+                Clipboard.SetText(selectedProduct.Key);
+        }
+
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
             if (e.ChangedButton == MouseButton.Left)
