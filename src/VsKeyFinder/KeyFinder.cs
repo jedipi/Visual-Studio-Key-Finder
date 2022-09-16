@@ -26,6 +26,7 @@ namespace VsKeyFinder
                     if (result.Success)
                     {
                         key = $"{result.Value}";
+                        break;
                     }
                 }
                 return key;
