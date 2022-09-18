@@ -81,8 +81,10 @@ namespace VsKeyFinder
             }
         }
 
-
-
-
+        private void btnAbout_Click(object sender, RoutedEventArgs e)
+        {
+            var aboutWindow = new AboutWIndow();
+            aboutWindow.ShowDialog();
+        }
     }
 }
