@@ -99,8 +99,10 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Row="0" Grid.ColumnSpan="4" Orientation="Horizontal" HorizontalAlignment="Center">
+                    <Button Name="btnSave" Click="btnSave_Click"
+                        Margin="5" HorizontalAlignment="Center" Padding="30 10" Background="RoyalBlue" Style="{StaticResource appButton}">Save</Button>
                     <Button x:Name="btnAbout" Click="btnAbout_Click"
-                        Margin="5" HorizontalAlignment="Center" Padding="30 10" Background="RoyalBlue" Style="{StaticResource appButton}">About</Button>
+                        Margin="5" HorizontalAlignment="Center" Padding="30 10" Background="SlateBlue" Style="{StaticResource appButton}">About</Button>
                 </StackPanel>
             </Grid>
 

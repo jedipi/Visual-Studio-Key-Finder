@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.Win32;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Input;
 
@@ -85,6 +89,37 @@ namespace VsKeyFinder
         {
             var aboutWindow = new AboutWIndow();
             aboutWindow.ShowDialog();
+        }
+
+        private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            var saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text file (*.txt)|*.txt";
+            if (saveFileDialog.ShowDialog() != true)
+                return;
+
+            var builder = new StringBuilder();
+
+            builder.AppendLine($"Visual Studil Key Finder.");
+            builder.AppendLine($"------------------------");
+            builder.AppendLine(Environment.NewLine);
+
+            foreach (var item in Products)
+            {
+                builder.AppendLine(item.Name);
+                builder.AppendLine(item.Key);
+                builder.AppendLine(Environment.NewLine);
+            }
+
+            try
+            {
+                File.WriteAllText(saveFileDialog.FileName, builder.ToString());
+                MessageBox.Show("File saved successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
