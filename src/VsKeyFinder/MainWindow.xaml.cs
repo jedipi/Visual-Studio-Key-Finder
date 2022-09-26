@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Documents;
 using System.Windows.Input;
 
 namespace VsKeyFinder
@@ -98,6 +100,34 @@ namespace VsKeyFinder
             if (saveFileDialog.ShowDialog() != true)
                 return;
 
+            try
+            {
+                File.WriteAllText(saveFileDialog.FileName, GetString());
+                MessageBox.Show("File saved successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnPrint_Click(object sender, RoutedEventArgs e)
+        {
+            var printDialog = new PrintDialog();
+            printDialog.PageRangeSelection = PageRangeSelection.AllPages;
+            printDialog.UserPageRangeEnabled = false;
+            if (printDialog.ShowDialog() == true)
+            {
+                var doc = new FlowDocument();
+
+                doc.ColumnWidth = printDialog.PrintableAreaWidth;
+                doc.Blocks.Add(new Paragraph(new Run(GetString())));
+                printDialog.PrintDocument(((IDocumentPaginatorSource)doc).DocumentPaginator, "Visual Studil Key Finder.");
+            }
+        }
+
+        private string GetString()
+        {
             var builder = new StringBuilder();
 
             builder.AppendLine($"Visual Studil Key Finder.");
@@ -111,15 +141,7 @@ namespace VsKeyFinder
                 builder.AppendLine(Environment.NewLine);
             }
 
-            try
-            {
-                File.WriteAllText(saveFileDialog.FileName, builder.ToString());
-                MessageBox.Show("File saved successfully");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            return builder.ToString();
         }
     }
 }
