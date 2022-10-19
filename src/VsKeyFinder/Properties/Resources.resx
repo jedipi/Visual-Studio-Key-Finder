@@ -141,6 +141,9 @@
   <data name="TxtCopy" xml:space="preserve">
     <value>Copy</value>
   </data>
+  <data name="TxtEnterprise" xml:space="preserve">
+    <value>Enterprise</value>
+  </data>
   <data name="TxtKey" xml:space="preserve">
     <value>Key</value>
   </data>
@@ -149,6 +152,9 @@
   </data>
   <data name="TxtProductName" xml:space="preserve">
     <value>Product Name</value>
+  </data>
+  <data name="TxtProfessional" xml:space="preserve">
+    <value>Professional</value>
   </data>
   <data name="TxtSave" xml:space="preserve">
     <value>Save</value>

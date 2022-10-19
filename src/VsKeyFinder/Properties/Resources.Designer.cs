@@ -70,7 +70,7 @@ namespace VsKeyFinder.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Originally created by Kin Tam.
+        ///   Looks up a localized string similar to Originally created by Kindeman.
         /// </summary>
         public static string lblOriginallyBy {
             get {
@@ -133,6 +133,15 @@ namespace VsKeyFinder.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Enterprise.
+        /// </summary>
+        public static string TxtEnterprise {
+            get {
+                return ResourceManager.GetString("TxtEnterprise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Key.
         /// </summary>
         public static string TxtKey {
@@ -156,6 +165,15 @@ namespace VsKeyFinder.Properties {
         public static string TxtProductName {
             get {
                 return ResourceManager.GetString("TxtProductName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Professional.
+        /// </summary>
+        public static string TxtProfessional {
+            get {
+                return ResourceManager.GetString("TxtProfessional", resourceCulture);
             }
         }
         

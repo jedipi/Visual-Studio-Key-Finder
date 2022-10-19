@@ -141,6 +141,9 @@
   <data name="TxtCopy" xml:space="preserve">
     <value>复制</value>
   </data>
+  <data name="TxtEnterprise" xml:space="preserve">
+    <value>企业版</value>
+  </data>
   <data name="TxtKey" xml:space="preserve">
     <value>产品密钥</value>
   </data>
@@ -149,6 +152,9 @@
   </data>
   <data name="TxtProductName" xml:space="preserve">
     <value>产品名称</value>
+  </data>
+  <data name="TxtProfessional" xml:space="preserve">
+    <value>专业版</value>
   </data>
   <data name="TxtSave" xml:space="preserve">
     <value>存档</value>

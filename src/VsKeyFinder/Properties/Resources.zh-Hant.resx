@@ -121,7 +121,7 @@
     <value>GitHub 專案</value>
   </data>
   <data name="lblOriginallyBy" xml:space="preserve">
-    <value>作者 Kin Tam</value>
+    <value>作者 Kindeman</value>
   </data>
   <data name="lblThankYou" xml:space="preserve">
     <value>感謝支持這個開源免費軟件!</value>
@@ -141,6 +141,9 @@
   <data name="TxtCopy" xml:space="preserve">
     <value>複製</value>
   </data>
+  <data name="TxtEnterprise" xml:space="preserve">
+    <value>企業版</value>
+  </data>
   <data name="TxtKey" xml:space="preserve">
     <value>產品金鑰</value>
   </data>
@@ -149,6 +152,9 @@
   </data>
   <data name="TxtProductName" xml:space="preserve">
     <value>產品名稱</value>
+  </data>
+  <data name="TxtProfessional" xml:space="preserve">
+    <value>專業版</value>
   </data>
   <data name="TxtSave" xml:space="preserve">
     <value>儲存</value>

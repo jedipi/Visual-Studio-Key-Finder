@@ -39,19 +39,7 @@ namespace VsKeyFinder
 
             _shown = true;
 
-            Products = new List<Product>();
-            var productData = ProductData.GetProducts();
-            var keyFinder = new KeyFinder();
-            foreach (var product in productData)
-            {
-                var key = keyFinder.FindKey(product);
-                if (!string.IsNullOrEmpty(key))
-                {
-                    product.Key = key;
-                    Products.Add(product);
-                }
-            }
-            datagrid.ItemsSource = Products;
+
 
             Locales = LocaleData.GetLocales();
 
@@ -184,11 +172,28 @@ namespace VsKeyFinder
         {
             var locale = cmbLocale.SelectedItem as Locale;
 
+            ChangeLocale(locale);
+
+        }
+
+        private void ChangeLocale(Locale locale)
+        {
             LocalizeDictionary.Instance.Culture = new CultureInfo(locale.Code);
 
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(locale.Code);
-
-
+            Products = new List<Product>();
+            var productData = ProductData.GetProducts();
+            var keyFinder = new KeyFinder();
+            foreach (var product in productData)
+            {
+                var key = keyFinder.FindKey(product);
+                if (!string.IsNullOrEmpty(key))
+                {
+                    product.Key = key;
+                    Products.Add(product);
+                }
+            }
+            datagrid.ItemsSource = Products;
         }
     }
 }
