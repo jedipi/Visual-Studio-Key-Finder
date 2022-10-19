@@ -118,39 +118,39 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblGitHubProject" xml:space="preserve">
-    <value>GitHub Project</value>
+    <value>GitHub 專案</value>
   </data>
   <data name="lblOriginallyBy" xml:space="preserve">
-    <value>Originally created by Kin Tam</value>
+    <value>作者 Kin Tam</value>
   </data>
   <data name="lblThankYou" xml:space="preserve">
-    <value>Thank you for using this FREE software.</value>
+    <value>感謝支持這個開源免費軟件!</value>
   </data>
   <data name="lblUpdated" xml:space="preserve">
-    <value>Last Updated:</value>
+    <value>最後更新:</value>
   </data>
   <data name="lblVersion" xml:space="preserve">
-    <value>Version:</value>
+    <value>版本:</value>
   </data>
   <data name="TxtAbout" xml:space="preserve">
-    <value>About</value>
+    <value>闗於</value>
   </data>
   <data name="txtClose" xml:space="preserve">
-    <value>Close</value>
+    <value>關閉</value>
   </data>
   <data name="TxtCopy" xml:space="preserve">
-    <value>Copy</value>
+    <value>複製</value>
   </data>
   <data name="TxtKey" xml:space="preserve">
-    <value>Key</value>
+    <value>產品金鑰</value>
   </data>
   <data name="TxtPrint" xml:space="preserve">
-    <value>Print</value>
+    <value>列印</value>
   </data>
   <data name="TxtProductName" xml:space="preserve">
-    <value>Product Name</value>
+    <value>產品名稱</value>
   </data>
   <data name="TxtSave" xml:space="preserve">
-    <value>Save</value>
+    <value>儲存</value>
   </data>
 </root>

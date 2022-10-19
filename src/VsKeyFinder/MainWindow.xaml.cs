@@ -1,12 +1,16 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Text;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Input;
+using VsKeyFinder.Data;
+using WPFLocalizeExtension.Engine;
 
 namespace VsKeyFinder
 {
@@ -17,13 +21,19 @@ namespace VsKeyFinder
     {
         bool _shown;
         public List<Product> Products { get; set; }
+        public List<Locale> Locales { get; set; }
         public MainWindow()
         {
+
             InitializeComponent();
+
+
         }
 
         private void Window_ContentRendered(object sender, System.EventArgs e)
         {
+
+            var a = Properties.Resources.TxtPrint;
             if (_shown)
                 return;
 
@@ -43,6 +53,32 @@ namespace VsKeyFinder
             }
             datagrid.ItemsSource = Products;
 
+            Locales = LocaleData.GetLocales();
+
+            cmbLocale.ItemsSource = Locales;
+            cmbLocale.DisplayMemberPath = "Name";
+            cmbLocale.SelectedValuePath = "Code";
+
+            var index = 0;
+            var currentCulture = CultureInfo.CurrentCulture;
+            switch (currentCulture.Name)
+            {
+                case "zh":
+                case "zh-CN":
+                case "zh-SG":
+                case "zh-Hans":
+                    index = 1;
+                    break;
+                case "zh-HK":
+                case "zh-TW":
+                case "zh-MO":
+                    index = 2;
+                    break;
+                default:
+                    index = 0;
+                    break;
+            }
+            cmbLocale.SelectedIndex = index;
         }
 
         private void btnCopy_Click(object sender, RoutedEventArgs e)
@@ -122,7 +158,7 @@ namespace VsKeyFinder
 
                 doc.ColumnWidth = printDialog.PrintableAreaWidth;
                 doc.Blocks.Add(new Paragraph(new Run(GetString())));
-                printDialog.PrintDocument(((IDocumentPaginatorSource)doc).DocumentPaginator, "Visual Studil Key Finder.");
+                printDialog.PrintDocument(((IDocumentPaginatorSource)doc).DocumentPaginator, "Visual Studio Key Finder.");
             }
         }
 
@@ -130,7 +166,7 @@ namespace VsKeyFinder
         {
             var builder = new StringBuilder();
 
-            builder.AppendLine($"Visual Studil Key Finder.");
+            builder.AppendLine($"Visual Studio Key Finder.");
             builder.AppendLine($"------------------------");
             builder.AppendLine(Environment.NewLine);
 
@@ -142,6 +178,17 @@ namespace VsKeyFinder
             }
 
             return builder.ToString();
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var locale = cmbLocale.SelectedItem as Locale;
+
+            LocalizeDictionary.Instance.Culture = new CultureInfo(locale.Code);
+
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(locale.Code);
+
+
         }
     }
 }

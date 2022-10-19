@@ -3,6 +3,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
+using VsKeyFinder.Data;
 
 namespace VsKeyFinder
 {

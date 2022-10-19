@@ -1,4 +1,4 @@
-﻿namespace VsKeyFinder
+﻿namespace VsKeyFinder.Data
 {
     public class Product
     {

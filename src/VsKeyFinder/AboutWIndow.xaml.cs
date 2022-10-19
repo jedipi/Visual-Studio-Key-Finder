@@ -49,8 +49,8 @@ namespace VsKeyFinder
             Assembly assembly = Assembly.GetExecutingAssembly();
             FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
             string version = fileVersionInfo.ProductVersion;
-            lblVersion.Content = $"Version: {version}";
-            lblUpdated.Content = $"Last Updated: {_updated.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern)}";
+            lblVersion.Content = $"{Properties.Resources.lblVersion} {version}";
+            lblUpdated.Content = $"{Properties.Resources.lblUpdated} {_updated.ToString(CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern)}";
         }
     }
 }
