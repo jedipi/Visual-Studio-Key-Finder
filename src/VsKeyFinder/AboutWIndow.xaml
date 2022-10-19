@@ -5,6 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VsKeyFinder"
         xmlns:p="clr-namespace:VsKeyFinder.Properties"
+        xmlns:lex="http://wpflocalizeextension.codeplex.com"
+        lex:LocalizeDictionary.DesignCulture="en"
+        lex:ResxLocalizationProvider.DefaultAssembly="VsKeyFinder"
+        lex:ResxLocalizationProvider.DefaultDictionary="Resources"
         mc:Ignorable="d"
         Title="" Height="350" Width="600" MinWidth="600" MinHeight="350" WindowStartupLocation="CenterScreen" WindowStyle="None" 
         AllowsTransparency="True" Background="Transparent" ContentRendered="Window_ContentRendered" >
@@ -42,24 +46,24 @@
                 <StackPanel Grid.Column="1">
                     <Label FontSize="21" Margin="10 0 0 10">Visual Studio Key Finder</Label>
 
-                    <Label Name="lblVersion" Content="{x:Static p:Resources.lblVersion}"  FontSize="14" Margin="10 0 0 0" />
-                    <Label Name="lblUpdated" Content="{x:Static p:Resources.lblUpdated}" FontSize="14" Margin="10 0 0 10"/>
+                    <Label Name="lblVersion" Content="{lex:Loc lblVersion}"  FontSize="14" Margin="10 0 0 0" />
+                    <Label Name="lblUpdated" Content="{lex:Loc lblUpdated}" FontSize="14" Margin="10 0 0 10"/>
 
-                    <Label Name="lblThankYou" Content="{x:Static p:Resources.lblThankYou}" FontSize="14" Margin="10 0 0 10"/>
+                    <Label Name="lblThankYou" Content="{lex:Loc lblThankYou}" FontSize="14" Margin="10 0 0 10"/>
 
                     <Label Name="lblProject" FontSize="14" Margin="10 0 0 10">
                         <Hyperlink NavigateUri="https://github.com/jedipi/Visual-Studio-Key-Finder" RequestNavigate="Hyperlink_RequestNavigate">
-                            <TextBlock Text="{x:Static p:Resources.lblGitHubProject}"/>
+                            <TextBlock Text="{lex:Loc lblGitHubProject}"/>
                         </Hyperlink>
                     </Label>
                 </StackPanel>
 
-                <Label Content="{x:Static p:Resources.lblOriginallyBy}" Grid.Column="1" VerticalAlignment="Bottom" FontSize="14" Margin="10 0 0 0" />
+                <Label Content="{lex:Loc lblOriginallyBy}" Grid.Column="1" VerticalAlignment="Bottom" FontSize="14" Margin="10 0 0 0" />
             </Grid>
             
 
             <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
-                <Button x:Name="btnClose" Click="btnClose_Click" Content="{x:Static p:Resources.txtClose}"
+                <Button x:Name="btnClose" Click="btnClose_Click" Content="{lex:Loc txtClose}"
                         Margin="5" HorizontalAlignment="Center" Padding="30 10" Background="RoyalBlue" Style="{StaticResource appButton}"/>
             </StackPanel>
 
