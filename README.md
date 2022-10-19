@@ -1,10 +1,11 @@
-# Visual-Studio-Key-Finder
+# Visual Studio Key Finder
 This is a little utility that can find all the Visual Studio license keys installed on your computer. This utility can be useful if you lost the product key of Visual Studio, and you want to reinstall it on your computer.
 
 **Features**
-- copy the selected key to clipboard
-- save all keys to text file
-- print all keys
+- Copy the selected key to clipboard
+- Save all keys to a text file
+- Print all keys
+- Localised for English, Simplified Chinese, and Traditional Chinese
 
 **Supported version**
 - Visual Studio 2022 Enterprise
