@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblGitHubProject" xml:space="preserve">
-    <value>GitHub 专案</value>
+    <value>GitHub 开源項目</value>
   </data>
   <data name="lblOriginallyBy" xml:space="preserve">
     <value>作者 Kin Tam</value>
