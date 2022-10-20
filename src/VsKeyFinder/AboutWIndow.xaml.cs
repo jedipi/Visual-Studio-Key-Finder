@@ -13,7 +13,7 @@ namespace VsKeyFinder
     /// </summary>
     public partial class AboutWIndow : Window
     {
-        private DateTime _updated = new DateTime(2022, 9, 18);
+        private DateTime _updated = new DateTime(2022, 10, 20);
         public AboutWIndow()
         {
             InitializeComponent();
