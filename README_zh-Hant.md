@@ -1,7 +1,7 @@
 # Visual Studio Key Finder
 
-這個實用小工具可以幫你找出安裝在電腦上的所有 Visual Studio 產品金鑰。 <br/>
-如果您丟失了 Visual Studio 的產品金鑰，而又想要在電腦上重新安裝，此實用小工具就會很有用。
+這個實用小程序可以幫你找出安裝在計算機上的所有 Visual Studio 產品密鑰。 <br/>
+如果您丟失了 Visual Studio 的產品密鑰，而又想要在計算機上重新安裝它，此實用程序會很有用。
 
 **Features**
 - 複製產品密鑰到剪貼板
