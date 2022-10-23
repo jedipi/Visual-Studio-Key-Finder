@@ -147,6 +147,9 @@
   <data name="TxtKey" xml:space="preserve">
     <value>產品金鑰</value>
   </data>
+  <data name="TxtPremium" xml:space="preserve">
+    <value>高級版</value>
+  </data>
   <data name="TxtPrint" xml:space="preserve">
     <value>列印</value>
   </data>
@@ -158,5 +161,8 @@
   </data>
   <data name="TxtSave" xml:space="preserve">
     <value>儲存</value>
+  </data>
+  <data name="TxtUltimate" xml:space="preserve">
+    <value>旗艦版</value>
   </data>
 </root>

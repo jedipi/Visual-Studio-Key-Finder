@@ -10,11 +10,11 @@
 - 支持英語、簡體中文和繁體中文語言
 
 **Supported version**
-- Visual Studio 2022 企業版
-- Visual Studio 2022 專業版
-- Visual Studio 2019 企業版
-- Visual Studio 2019 專業版
-
+- Visual Studio 2022 企業版, 專業版
+- Visual Studio 2019 企業版, 專業版
+- Visual Studio 2017 企業版, 專業版
+- Visual Studio 2015 企業版, 專業版
+- Visual Studio 2013 旗艦版, 高級版, 專業版
 
 <img src="sample.png" width="500" />
 <img src="about.png" width="500" />

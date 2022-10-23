@@ -10,11 +10,26 @@ namespace VsKeyFinder.Data
             {
                 new Product()
                 {
+                    Name = $"Visual Studio 2013 {Properties.Resources.TxtUltimate}",
+                    Guid = "E79B3F9C-6543-4897-BBA5-5BFB0A02BB5C",
+                    Code = "06181",
+                    Key = ""
+                },
+                new Product()
+                {
                     Name = $"Visual Studio 2013 {Properties.Resources.TxtProfessional}",
                     Guid = "E79B3F9C-6543-4897-BBA5-5BFB0A02BB5C",
                     Code = "06177",
                     Key = ""
                 },
+                new Product()
+                {
+                    Name = $"Visual Studio 2013 {Properties.Resources.TxtPremium}",
+                    Guid = "E79B3F9C-6543-4897-BBA5-5BFB0A02BB5C",
+                    Code = "06191",
+                    Key = ""
+                },
+
                 new Product()
                 {
                     Name = $"Visual Studio 2015 {Properties.Resources.TxtEnterprise}",
