@@ -13,6 +13,7 @@ This is a little utility that can find all the Visual Studio license keys instal
 - Visual Studio 2017 Enterprise, Professional
 - Visual Studio 2015 Enterprise, Professional
 - Visual Studio 2013 Ultimate, Premium, Professional
+- Visual Studio 2012 Ultimate, Premium, Professional
 
 <img src="sample.png" width="500" />
 <img src="about.png" width="500" />
