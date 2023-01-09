@@ -1,3 +1,7 @@
+#### Supporters
+[![Stargazers repo roster for @jedipi/AI-Image-Zoom](https://reporoster.com/stars/jedipi/AI-Image-Zoom)](https://github.com/jedipi/AI-Image-Zoom/stargazers)
+[![Forkers repo roster for @jedipi/AI-Image-Zoom](https://reporoster.com/forks/jedipi/AI-Image-Zoom)](https://github.com/jedipi/AI-Image-Zoom/network/members)
+
 # Visual Studio Key Finder
 This is a little utility that can find all the Visual Studio license keys installed on your computer. This utility can be useful if you lost the product key of Visual Studio, and you want to reinstall it on your computer.
 
